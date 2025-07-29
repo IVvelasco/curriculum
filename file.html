@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Eduarda Cassol Velasco da Silva - Currículo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 11px;
+            line-height: 1.3;
+            color: #333;
+            background: white;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            padding: 15mm;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 15px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .name {
+            font-size: 18px;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .title {
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 35% 65%;
+            gap: 20px;
+            height: calc(100% - 120px);
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .main {
+            padding: 0 10px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 2px solid #667eea;
+            font-weight: 600;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 10px;
+        }
+
+        .contact-icon {
+            width: 15px;
+            margin-right: 8px;
+            font-size: 10px;
+        }
+
+        .contact-text {
+            word-break: break-all;
+        }
+
+        .skill-item {
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+            font-weight: 500;
+            font-size: 10px;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: #e9ecef;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .languages .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            padding: 6px 8px;
+            background: white;
+            border-radius: 4px;
+            font-size: 10px;
+            border-left: 2px solid #667eea;
+        }
+
+
+        .certification-badge {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 8px;
+            font-weight: 500;
+        }
+
+        .soft-skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        .soft-skill-item {
+            background: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 9px;
+            border-left: 2px solid #667eea;
+        }
+
+        .objective-box {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            border: 1px solid #667eea30;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 10px;
+            text-align: justify;
+        }
+
+        .education-item, .project-item {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .degree, .project-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 11px;
+            margin-bottom: 3px;
+        }
+
+        .institution, .project-tech {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 2px;
+            font-size: 10px;
+        }
+
+        .date {
+            color: #6c757d;
+            font-size: 9px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .description {
+            color: #555;
+            font-size: 10px;
+            text-align: justify;
+        }
+
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            z-index: 1000;
+            font-size: 12px;
+        }
+
+        .print-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Estilos de impressão */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 10px;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 10mm;
+                box-shadow: none;
+                min-height: auto;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-progress {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .certification-badge {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        .edit-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .edit-mode:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 180px;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .pdf-controls {
+            position: fixed;
+            top: 20px;
+            right: 340px;
+            background: #6f42c1;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .pdf-controls:hover {
+            background: #5a2d91;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(111, 66, 193, 0.4);
+        }
+
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+
+        .pdf-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .pdf-modal h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .pdf-option-group {
+            margin-bottom: 20px;
+        }
+
+        .pdf-option-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .pdf-option-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .pdf-option-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .pdf-option-select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .pdf-option-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .pdf-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .pdf-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pdf-btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .pdf-btn-primary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .pdf-btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .pdf-btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .scale-preview {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .objective-box {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            border: 2px solid #667eea30;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .soft-skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .soft-skill-item {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 3px solid #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .edit-mode, .print-btn, .pdf-controls {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 5px;
+                display: inline-block;
+                width: calc(33.33% - 10px);
+            }
+
+            .soft-skills {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .edit-mode, .print-btn, .pdf-controls {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="edit-mode" onclick="toggleEditMode()">✏️ Editar</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
+
+
+    <div class="container">
+        <div class="header">
+            <div class="profile-img">ME</div>
+            <h1 class="name">
+                <span class="editable" contenteditable="false">SEU NOME</span>
+            </h1>
+            <p class="title">
+                <span class="editable" contenteditable="false"> FORMAÇÃO| CARGO</span>
+            </p>
+        </div>
+
+        <div class="content">
+            <div class="sidebar">
+                <div class="section">
+                    <h2 class="section-title">Contato</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <span class="editable" contenteditable="false">e-mail</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <span class="editable" contenteditable="false">(00)00000-0000</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <span class="editable" contenteditable="false"> Localização</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <span class="editable" contenteditable="false">https://www.linkedin.com/in</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <span class="editable" contenteditable="false">https://www.github.com</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Idiomas</h2>
+                    <div class="languages">
+                        <div class="language-item">
+                            <span>Português</span>
+                            <span style="font-weight: 600;">Nativo</span>
+                        </div>
+                        <div class="language-item">
+                            <span>Inglês</span>
+                            <span class="certification-badge">C1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span class="editable" contenteditable="false">Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span class="editable" contenteditable="false">JavaScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span class="editable" contenteditable="false">HTML/CSS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span class="editable" contenteditable="false">SQL</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span class="editable" contenteditable="false">Git/GitHub</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Soft Skills</h2>
+                    <div class="editable">
+                        <div class="soft-skill-item">Comunicação</div>
+                        <div class="soft-skill-item">Trabalho em Equipe</div>
+                        <div class="soft-skill-item">Adaptabilidade</div>
+                        <div class="soft-skill-item">Criatividade</div>
+                        <div class="soft-skill-item">Proatividade</div>
+                        <div class="soft-skill-item">Aprendizado Rápido</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="section">
+                    <h2 class="section-title">Objetivo Profissional</h2>
+                    <div class="objective-box">
+                        <p class="editable" contenteditable="false">
+                            Texto texto texto texto...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Formação</h2>
+                    <div class="education-item">
+                        <h3 class="degree">
+                            <span class="editable" contenteditable="false">Formação</span>
+                        </h3>
+                        <p class="institution">
+                            <span class="editable" contenteditable="false">Instituição de Ensino</span>
+                        </p>
+                        <p class="date">
+                            <span class="editable" contenteditable="false">Inicio - Final</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                               Descrição da sua formação, por exemplo quais matérias você teve, como resumiria as coisas que aprendeu
+                               agradecimento à instituição e/ou seus pontos fortes enquanto aluno
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3 class="degree">
+                            <span class="editable" contenteditable="false">Certificação 1</span>
+                        </h3>
+                        <p class="institution">
+                            <span class="editable" contenteditable="false">Instituição</span>
+                        </p>
+                        <p class="date">
+                            <span class="editable" contenteditable="false">Ano</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                                Certificação ... comprovando proficiência em ...
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Projetos Acadêmicos</h2>
+                    <div class="project-item">
+                        <h3 class="project-title">
+                            <span class="editable" contenteditable="false">Seu Projeto</span>
+                        </h3>
+                        <p class="project-tech">
+                            <span class="editable" contenteditable="false">Habilidades usadas</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                                Descrição sobre você, tomando por exemplo a autoria desse código: " Denvolvedor Backend, com alguns projetos de Front-end em andamento,  interessada em Cibersegurança,
+                                meta final: Perita Forense Computacional"
+                            </span>
+                        </p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3 class="project-title">
+                            <span class="editable" contenteditable="false">Projeto 2</span>
+                        </h3>
+                        <p class="project-tech">
+                            <span class="editable" contenteditable="false">Habilidade usada</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                                Texto aqui
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3 class="project-title">
+                            <span class="editable" contenteditable="false">Item de Projeto</span>
+                        </h3>
+                        <p class="project-tech">
+                            <span class="editable" contenteditable="false">Item de Projeto</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                                Descrição de Projeto
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Atividades Complementares</h2>
+                    <div class="education-item">
+                        <h3 class="degree">
+                            <span class="editable" contenteditable="false">Projeto Social ou trabalho voluntário, se houver</span>
+                        </h3>
+                        <p class="date">
+                            <span class="editable" contenteditable="false">Ano & Ano</span>
+                        </p>
+                        <p class="description">
+                            <span class="editable" contenteditable="false">
+                                Descrição Projeto 
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal PDF -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <h3>🎯 Configurações de Exportação PDF</h3>
+            
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">📏 Escala (%)</label>
+                <input type="range" class="pdf-option-input" id="scaleRange" min="50" max="150" value="100" oninput="updateScalePreview()">
+                <div class="scale-preview" id="scalePreview">100% - Tamanho Normal</div>
+            </div>
+
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">📄 Orientação</label>
+                <select class="pdf-option-select" id="orientation">
+                    <option value="portrait">Retrato (Vertical)</option>
+                    <option value="landscape">Paisagem (Horizontal)</option>
+                </select>
+            </div>
+
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">📐 Tamanho da Página</label>
+                <select class="pdf-option-select" id="pageSize">
+                    <option value="A4">A4 (210 × 297 mm)</option>
+                    <option value="Letter">Carta (216 × 279 mm)</option>
+                    <option value="Legal">Ofício (216 × 356 mm)</option>
+                    <option value="A3">A3 (297 × 420 mm)</option>
+                </select>
+            </div>
+
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">🔲 Margens</label>
+                <select class="pdf-option-select" id="margins">
+                    <option value="minimum">Mínimas (0.4 cm)</option>
+                    <option value="default" selected>Padrão (1.0 cm)</option>
+                    <option value="large">Grandes (2.0 cm)</option>
+                    <option value="custom">Personalizadas</option>
+                </select>
+            </div>
+
+            <div class="pdf-option-group" id="customMarginsGroup" style="display: none;">
+                <label class="pdf-option-label">Margens Personalizadas (cm)</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <input type="number" class="pdf-option-input" id="marginTop" placeholder="Superior" min="0" max="5" step="0.1" value="1">
+                    <input type="number" class="pdf-option-input" id="marginBottom" placeholder="Inferior" min="0" max="5" step="0.1" value="1">
+                    <input type="number" class="pdf-option-input" id="marginLeft" placeholder="Esquerda" min="0" max="5" step="0.1" value="1">
+                    <input type="number" class="pdf-option-input" id="marginRight" placeholder="Direita" min="0" max="5" step="0.1" value="1">
+                </div>
+            </div>
+
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">🎨 Incluir Cores de Fundo</label>
+                <select class="pdf-option-select" id="backgroundColors">
+                    <option value="true" selected>Sim - Com cores</option>
+                    <option value="false">Não - Apenas texto</option>
+                </select>
+            </div>
+
+            <div class="pdf-option-group">
+                <label class="pdf-option-label">📝 Nome do Arquivo</label>
+                <input type="text" class="pdf-option-input" id="fileName" value="Curriculo_Maria_Eduarda_Velasco" placeholder="Nome do arquivo PDF">
+            </div>
+
+            <div class="pdf-buttons">
+                <button class="pdf-btn pdf-btn-secondary" onclick="closePdfModal()">❌ Cancelar</button>
+                <button class="pdf-btn pdf-btn-primary" onclick="previewPdf()">👁️ Visualizar</button>
+                <button class="pdf-btn pdf-btn-primary" onclick="generatePdf()">💾 Gerar PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isEditMode = false;
+
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const editables = document.querySelectorAll('.editable');
+            const button = document.querySelector('.edit-mode');
+            
+            editables.forEach(el => {
+                el.contentEditable = isEditMode;
+                if (isEditMode) {
+                    el.style.border = '1px dashed #667eea';
+                } else {
+                    el.style.border = 'none';
+                }
+            });
+            
+            button.textContent = isEditMode ? '💾 Salvar' : '✏️ Editar';
+            button.style.background = isEditMode ? '#28a745' : '#667eea';
+        }
+
+        // Adicionar animação de entrada
+        window.addEventListener('load', () => {
+            const container = document.querySelector('.container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            container.style.transition = 'all 0.6s ease';
+            
+            setTimeout(() => {
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Salvar alterações
+        document.addEventListener('input', (e) => {
+            if (e.target.classList.contains('editable') && isEditMode) {
+                console.log('Salvando:', e.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
